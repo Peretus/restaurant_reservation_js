@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>Javascript Bare</title>
+</head>
+<body>
+
+<script type="text/javascript">
+  var casey = "CASEY";
+  var chris = "CHRIS";
+  var bob = "BOB";
+  var casey_reservation = true;
+  var chris_reservation = true;
+  var bob_reservation = true;
+
+  while (casey_reservation || bob_reservation || chris_reservation) {
+    var name = prompt("What is your name?").toUpperCase();
+      if (name === casey || name === chris || name === bob) {
+
+          if (name === casey && casey_reservation) {
+            alert("Welcome to the Bates Motel, "+name+"!");
+            casey_reservation = false;
+          } else if (name === chris && chris_reservation) {
+            alert("Welcome to the Bates Motel, "+name+"!");
+            chris_reservation = false;
+          } else if (name === bob && bob_reservation) {
+            alert("Welcome to the Bates Motel, "+name+"!");
+            bob_reservation = false;
+          } else {
+            alert("Sorry, "+name+", that reservation has already been claimed.");
+          }
+
+      } else if (name === 'EXIT') {
+          break;
+
+      } else {
+          alert("Sorry, "+name+", your name is not on the list.");
+      }
+    }
+
+</script>
+
+</body>
+</html>
